@@ -1,1 +1,2 @@
-# programing_ad_Intelligent-processing
+# プログラミング応用
+##知能処理演習保存用
