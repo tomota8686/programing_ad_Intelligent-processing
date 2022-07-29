@@ -3,7 +3,7 @@ class State {
     //インスタンス
     State parent;
     Action action;
-    World world;
+    World world;    
     
     //コンストラクタ（引数:2）
     State(World world) {

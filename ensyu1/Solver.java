@@ -1,6 +1,7 @@
 import java.util.*;
 
 class Solver {
+
     void solve(State root) {
         State goal = this.search(root);
         if (goal != null) {
@@ -8,9 +9,13 @@ class Solver {
         }
     }
 
+    int cnt = 0;
+
     State search(State root) {
         ArrayList<State> openList = new ArrayList<State>();
         openList.add(root);
+
+        cnt = 0;
 
         while (openList.size() > 0) {
             State state = this.get(openList);
@@ -19,6 +24,7 @@ class Solver {
             }
             ArrayList<State> children = this.expand(state);
             openList = this.concat(openList, children);
+            cnt++;
         }
 
         return null;
@@ -53,5 +59,6 @@ class Solver {
             goal = goal.parent;
         }
         System.out.println();
+        System.out.println("評価:"+ cnt);
     }
 }
